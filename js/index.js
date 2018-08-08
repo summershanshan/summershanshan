@@ -1,14 +1,13 @@
 /**
  * Created by Administrator on 2016/2/20.
  */
-//ÂÖ²¥Í¼ banner²¿·Ö
 $(function(){
   banner();
     navTabs();
     $('[data-toggle="tooltip"]').tooltip();
 })
 var banner=function(){
-    //»ñÈ¡Êý¾Ý
+    
     var myData='';
     var getBannerData=function(callback){
         if(myData){
@@ -40,7 +39,7 @@ var banner=function(){
                     html+='<img src="'+data[i].img+'" alt=""/>';
                     html+='</a></div>';
 
-                    //µãºÐ×Ó
+                    //ï¿½ï¿½ï¿½ï¿½ï¿½
                     point+='<li data-target="#wjs_banner" data-slide-to="'+i+'" class="'+(i==0?"active":"")+'"></li>'
                 }
 
@@ -63,7 +62,7 @@ var banner=function(){
         renderHtml();
     }).trigger('resize');
 
-    //ÊÖ»ú¶Ë»¬¶¯Ð§¹û
+    //ï¿½Ö»ï¿½ï¿½Ë»ï¿½ï¿½ï¿½Ð§ï¿½ï¿½
     var startX=0;
     var moveX=0;
     var distanceX=0;
@@ -77,11 +76,11 @@ var banner=function(){
             isMove=true;
         })
         .on('touchend',function(){
-            //Ïò×ó»¬
+            //ï¿½ï¿½ï¿½ï¿½
             if(distanceX<0){
                 $(this).carousel('next');
             }
-            //ÏòÓÒ»¬
+            //ï¿½ï¿½ï¿½Ò»ï¿½
             else if(distanceX>0){
                 $(this).carousel('prev');
             }
